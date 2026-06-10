@@ -1,0 +1,90 @@
+We are building an enterprise Data Quality and Governance platform. This prompt is only for Phase 1, Module 3: Metadata Store.
+
+Use the connector framework and asset registry as already designed. There are some work on Metadata Store is already done. Do not overwite it until it is necessary and no other option to implement it.
+
+<scope>
+Focus only on:
+- normalized metadata persistence
+- metadata versioning or snapshots
+- current-state and historical metadata queries
+- schema evolution tracking
+- quality-related placeholders
+
+Do not implement:
+- full business glossary
+- governance policy engine
+- lineage graph
+- rule engine
+- catalog UI
+</scope>
+
+<objective>
+Design and implement a metadata store that persists normalized technical and operational metadata for discovered assets.
+
+The metadata store must support:
+- current metadata view
+- historical snapshots
+- schema evolution comparisons
+- future governance and quality extensions
+</objective>
+
+<requirements>
+Store at least:
+- source metadata
+- schema metadata
+- table metadata
+- column metadata
+- data type info
+- nullable flag
+- precision and scale
+- default values
+- partition information if available
+- row count snapshot
+- last modified metadata if available
+- tags and labels
+- ownership links
+- operational metadata:
+  - last_scanned_at
+  - scan_status
+  - scan_duration
+  - scan_version
+- quality placeholders:
+  - latest_profile_score
+  - latest_quality_status
+  - critical_data_element
+  - attached_rule_count_placeholder
+</requirements>
+
+<design_constraints>
+- Prefer relational design unless another choice is clearly justified
+- Support both latest-state and historical comparison queries
+- Make schema changes trackable over time
+- Design so future lineage and governance modules can attach without a major rewrite
+</design_constraints>
+
+<deliverables>
+Return output in this order:
+1. Metadata domain summary
+2. Snapshot/versioning strategy
+3. Entity design
+4. Database schema
+5. Historical query strategy
+6. APIs
+7. Folder structure
+8. Implementation plan
+9. Code
+10. Next integration notes for Scan Orchestration
+</deliverables>
+
+<definition_of_done>
+A developer should be able to:
+- persist normalized metadata from a connector
+- retrieve latest metadata for any asset
+- view historical metadata snapshots
+- detect schema changes across scan runs
+</definition_of_done>
+
+Start with:
+1. Metadata domain summary
+2. Snapshot/versioning strategy
+3. Entity design
