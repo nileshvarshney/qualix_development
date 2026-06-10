@@ -1,0 +1,110 @@
+We are building an enterprise Data Quality and Governance platform. This prompt is only for Phase 1, Module 2: Asset Registry.
+
+Use the previously defined connector framework as the upstream producer of discovered metadata.
+
+<scope>
+Focus only on:
+- asset registry domain model
+- stable asset identity
+- hierarchical asset relationships
+- asset lifecycle and status
+- ownership hooks
+- search and lookup needs
+
+Do not implement:
+- business glossary
+- lineage graph
+- governance policy engine
+- certifications
+- full catalog UX
+</scope>
+
+<objective>
+Design and implement a central asset registry that stores discovered assets from connected data sources.
+
+It must support these asset types:
+- source
+- database/catalog
+- schema
+- table
+- column
+- file/dataset
+- optional logical dataset placeholder for future use
+</objective>
+
+<requirements>
+Implement:
+1. Stable asset identity strategy across rescans
+2. Parent-child hierarchy support
+3. Physical asset registration
+4. Asset lifecycle states:
+   - active
+   - missing
+   - deprecated
+   - scan_failed
+   - disabled
+5. Search by display name, physical name, and qualified name
+6. Owner and steward placeholders
+7. Criticality and sensitivity placeholders
+8. Soft delete or missing-state tracking for removed assets
+9. API for querying asset trees and asset details
+</requirements>
+
+<required_fields>
+Include at least:
+- asset_id
+- parent_asset_id
+- source_id
+- asset_type
+- physical_name
+- display_name
+- qualified_name
+- path_or_location
+- description
+- status
+- criticality
+- sensitivity_placeholder
+- owner_user_id
+- owner_team_id
+- steward_user_id_placeholder
+- domain_placeholder
+- discovered_at
+- last_seen_at
+- created_at
+- updated_at
+</required_fields>
+
+<design_constraints>
+- Keep physical and logical asset concepts separate
+- Design for future catalog, glossary, lineage, and governance extensions
+- Prioritize stable identifiers and clean hierarchy traversal
+- Support rescans without creating duplicate asset records
+</design_constraints>
+
+<deliverables>
+Return output in this order:
+1. Domain model summary
+2. Identity strategy
+3. Entity relationships
+4. Database schema
+5. Asset lifecycle logic
+6. APIs
+7. Folder structure
+8. Implementation plan
+9. Code
+10. Next integration notes for Metadata Store
+</deliverables>
+
+<definition_of_done>
+A developer should be able to:
+- create assets from discovered metadata
+- maintain stable asset IDs across rescans
+- browse parent-child asset hierarchy
+- search assets
+- mark assets missing or deprecated without hard deletion
+</definition_of_done>
+
+Start with:
+1. Domain model summary
+2. Identity strategy
+3. Entity relationships
