@@ -1,4 +1,4 @@
-# Claude Code Prompt — Phase 1 · Module 3: Metadata Store
+  # Claude Code Prompt — Phase 1 · Module 3: Metadata Store
 
 ## Context
 You are enhancing an existing, working enterprise Data Quality and Governance platform.
