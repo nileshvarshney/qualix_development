@@ -1,0 +1,59 @@
+# Phase 1 · Final Integration Pass
+
+## Context
+You are enhancing an existing, working enterprise Data Quality and Governance platform.
+All Phase 1 modules are already implemented:
+1. Source Connector Framework
+2. Asset Registry
+3. Metadata Store
+4. Scan Orchestration
+5. Results Storage
+6. Basic User and Role Model
+
+**Read all existing code before writing anything. Do not overwrite existing files unless there is no other option.**
+
+---
+
+## Objective
+Integrate all Phase 1 modules into a coherent end-to-end platform flow supporting:
+- Create source
+- Test source
+- Trigger metadata discovery
+- Register assets
+- Persist metadata snapshots
+- Store scan run history
+- Associate assets with owners
+- Query assets and scan results through APIs
+
+---
+
+## Requirements
+1. Review module boundaries and identify missing interfaces
+2. Define end-to-end service interactions
+3. Define transaction boundaries and failure handling
+4. Define event contracts or internal service calls
+5. Wire APIs together
+6. Add integration tests for core flows
+7. Ensure consistent IDs, audit fields, and timestamps across all modules
+8. Document future extension points for Phase 2 profiling and rules
+
+---
+
+## Deliverables
+Produce in this order:
+1. Integration architecture summary
+2. End-to-end sequence flow
+3. Missing interface fixes
+4. Final unified API map
+5. Integration test plan
+6. Code changes
+7. Known risks
+8. Phase 2 extension points
+
+---
+
+## Definition of Done
+A developer must be able to:
+- Run the full Phase 1 flow from source registration to asset and scan history retrieval
+- Inspect integrated APIs
+- Understand how to plug in profiling and rule execution in Phase 2
